@@ -90,7 +90,10 @@
           : url
       };
     };
+    
     //YOUR TURN: add your Mapbox token
+    mapboxgl.accessToken =
+    'pk.eyJ1Ijoic3kwOTI4IiwiYSI6ImNsOXEyb213OTB3NzAzb3A4NGozdW5ucjQifQ.YGLTPX9phjwJRolj_X1HwA';
     
     mapboxgl.accessToken = 'pk.eyJ1IjoibWFwYm94LWNvbW11bml0eSIsImEiOiJja2tkN21jcjAwMG51MnBxdHAxemdueGpzIn0.e0IzLkytGq4pcGGieP8KNA'; //Mapbox token 
     var map = new mapboxgl.Map({
@@ -105,7 +108,7 @@
       $.ajax({
         type: "GET",
         //YOUR TURN: Replace with csv export link
-        url: 'https://docs.google.com/spreadsheets/d/1dLkr70tfAL_-U6ipad9xLF39lHmU8k-xd08uKHkLD5M/gviz/tq?tqx=out:csv&sheet=Sheet1',
+        url: 'https://docs.google.com/spreadsheets/d/1MkwiGtEHgJhYJ8RwQAgWRWV-1DuteYr_sXs602yrI18/gviz/tq?tqx=out:csv&sheet=Sheet1',
         dataType: "text",
         success: function (csvData) { makeGeoJSON(csvData); }
       });
